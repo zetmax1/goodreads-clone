@@ -1,0 +1,20 @@
+.profile_pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.small_profile_pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.book-cover{
+    width: 250px;
+    height: 300px;
+}
+
+.small_book_cover{
+    width: 150px;
+    height: 150px;
+}

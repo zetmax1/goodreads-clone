@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Confirm Review Delete{% endblock %}
+
+{% block content %}
+    <h3>Are you sure to delete this review</h3>
+    <p><b>Book: </b>{{ book.title }}</p>
+    <p><b>Comment: </b> {{ review.comment }}</p>
+    <a class="btn btn-outline-success" href="{% url 'books:detail' book.id %}">No</a>
+    <a class="btn btn-outline-danger" href="{% url 'books:delete_review' book.id review.id %}">Yes</a>
+{% endblock %}
