@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Specific genre{% endblock %}
+{% block content %}
+
+    <div class="container mt-2">
+        <h3>All books about {{ genre }} genre</h3>
+        <div class="row g-3">
+            {% for book in books %}
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="card h-100">
+                        <a href="{% url 'books:detail' book.id %}"> <img src="{{ book.cover_picture.url }}"
+                                                                         class="card-img-top" alt="Book"></a>
+                        <div class="card-body d-flex flex-column">
+                            <a href="{% url 'books:detail' book.id %}" style="text-decoration: None"><h6
+                                    class="card-title">{{ book.title }}</h6></a>
+                            <p class="card-text small text-muted flex-grow-1">{{ book.description|truncatewords:30 }}</p>
+                            <div class="mt-auto">
+                                <small class="text-muted">
+                                    {{ book.author }}
+                                    <ul>
+                                        {% for author in authors_by_book.values.values %}
+                                            <li>{{ author.full_name }}</li>
+                                        {% empty %}
+                                            <li>No authors found for this book.</li>
+                                        {% endfor %}
+                                    </ul>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

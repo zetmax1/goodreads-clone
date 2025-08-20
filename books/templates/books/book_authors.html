@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="{{ author.image.url }}" alt="author img" width="250px" height="250px">
+            </div>
+            <div class="col-lg-6">
+                <p><b>First name: </b>{{ author.first_name }}</p>
+                <p><b>Last name: </b>{{ author.last_name }}</p>
+                <p><b>Email: </b>{{ author.email }}</p>
+                <p><b>Bio: </b>{{ author.bio }}</p>
+            </div>
+        </div>
+        <h4 class=" mt-5">{{ author.full_name }}'s books</h4>
+        <div class=" row row-cols-1 row-cols-md-5 g-4">
+
+            {% for book in books %}
+                <div class="col">
+                    <div class="card" style="border:None">
+                        <a href="{% url 'books:detail' book.id %}"> <img src="{{ book.cover_picture.url }}"
+                                                                         class="card-img-top" alt="book img"></a>
+                        <div class="card-body">
+                            <a href="{% url 'books:detail' book.id %}" style="text-decoration: None; color: black"><h5
+                                    class="card-title">{{ book.title }}</h5></a>
+                            <p class="card-text">{{ book.description|truncatewords:20 }}</p>
+                            <p class="card-text"><small class="text-muted">{{ book.isbn }}</small></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
