@@ -1,55 +1,45 @@
-
+# ==== Django & Python ====
+*.py[cod]
+*$py.class
+__pycache__/
 *.log
 *.pot
 *.pyc
-__pycache__
+db.sqlite3
+local_settings.py
+media/
+staticfiles/
+static/
 
+# ==== Virtual Environments ====
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# Backup files #
-*.bak
+# ==== pip logs ====
+pip-log.txt
+pip-delete-this-directory.txt
 
-# If you are using PyCharm #
-# User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+# ==== Coverage & Test ====
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.noseids
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+.hypothesis/
 
-# AWS User-specific
-.idea/**/aws.xml
-
-# Generated files
-.idea/**/contentModel.xml
-
-# Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
-
-# Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
-
-# File-based project format
-*.iws
-
-# IntelliJ
-out/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Python #
-*.py[cod]
-*$py.class
-
-# Distribution / packaging
-.Python build/
+# ==== Distribution / packaging ====
+.Python
+build/
 develop-eggs/
 dist/
 downloads/
@@ -65,82 +55,78 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-*.manifest
-*.spec
+MANIFEST
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# ==== IDEs ====
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-.pytest_cache/
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+.history/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# PyCharm / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/contentModel.xml
 
-# pyenv
-.python-version
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
 
-# celery
-celerybeat-schedule.*
+# Jupyter
+.ipynb_checkpoints/
 
-# SageMath parsed files
-*.sage.py
+# macOS
+.DS_Store
 
-# Environments
-config_/.env
-.venv
-config/.env
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# System
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# mkdocs documentation
-/site
+# Log and backup files
+*.bak
+*.tmp
+*.swp
+*.swo
 
 # mypy
 .mypy_cache/
 
-# Sublime Text #
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-*.sublime-workspace
-*.sublime-project
+# celery
+celerybeat-schedule.*
 
-# sftp configuration file
-sftp-config.json
+# mkdocs
+/site
 
-# Package control specific files Package
-Control.last-run
-Control.ca-list
-Control.ca-bundle
-Control.system-ca-bundle
-GitHub.sublime-settings
+# dotenv config
+*.env
+.env.*
 
+# Git
+*.orig
 
-
-# Visual Studio Code #
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history
-
-.idea/
-.DS_Store/
-db.sqlite3
-
-
+# Docker (optional)
+*.pid
+docker-compose.override.yml
