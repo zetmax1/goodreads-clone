@@ -28,4 +28,4 @@ RUN pip install -r /opt/app/requirements.txt
 
 COPY . /opt/app/
 
-CMD ./manage.py runserver 0.0.0.0:8000
+CMD ["./manage.py", "runserver", "0.0.0.0:8001"]
